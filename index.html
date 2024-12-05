@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="alin.css"> -->
 </head>
 <body>
+    <header>
+        <h1>Matrix Operations Calculator</h1>
+    </header>
+
     <form action="" method="post" id="form">
-        <div class="div" style="display: flex;">
-            <div class="kiri">
+        <div class="utama">
+            <div class="bagian kiri">
                 <table id="satu">
                     <tr>
                         <td><input type="number"></td>
@@ -20,13 +26,15 @@
                         <td><input type="number"></td>
                     </tr>
                 </table>
-                <button id="baris1">Tambah Baris</button>
-                <button id="kolom1">Tambah Kolom</button>
-                <button id="hbaris1">Hapus Baris</button>
-                <button id="hkolom1">Hapus Kolom</button>
+                <div class="wadah">
+                    <button id="baris1">Tambah Baris</button>
+                    <button id="kolom1">Tambah Kolom</button>
+                    <button id="hbaris1">Hapus Baris</button>
+                    <button id="hkolom1">Hapus Kolom</button>
+                </div>
             </div>
 
-            <div class="kanan">
+            <div class="bagian kanan">
                 <table id="dua">
                     <tr>
                         <td><input type="number"></td>
@@ -37,23 +45,27 @@
                         <td><input type="number"></td>
                     </tr>
                 </table>
-                <button id="baris2">Tambah Baris</button>
-                <button id="kolom2">Tambah Kolom</button>
-                <button id="hbaris2">Hapus Baris</button>
-                <button id="hkolom2">Hapus Kolom</button>
+                <div class="wadah">
+                    <button id="baris2">Tambah Baris</button>
+                    <button id="kolom2">Tambah Kolom</button>
+                    <button id="hbaris2">Hapus Baris</button>
+                    <button id="hkolom2">Hapus Kolom</button>
+                </div>
             </div>
             
             
         </div>
     </div>
+    <div class="kelasking">
     <input type="submit" value="Kali" id="kali">
     <input type="submit" value="Tambah" id="tambah">
     <input type="submit" value="Kurang" id="kurang">
     <input type="submit" value="Scalar" id="scalar">
     <input type="submit" value="inversion" id="inversion">
     <input type="submit" value="transpose" id="transpose">
+</div>
     </form>
-
+    <div class="anjay" id="anjay"></div>
 <script src="script.js"></script>
 <script src="operasi.js"></script>
 </body>

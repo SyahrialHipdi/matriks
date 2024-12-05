@@ -5,6 +5,7 @@ const kurang = document.getElementById("kurang");
 const inversion = document.getElementById("inversion");
 const transpose = document.getElementById("transpose");
 const scalar = document.getElementById("scalar");
+const anjay = document.getElementById("anjay");
 let all;
 let matriks=[];
 let satu;
@@ -121,7 +122,12 @@ function isi(hasil){
         });
         table.appendChild(tr);
     });
-    document.body.appendChild(table);
+    table.setAttribute('class','uhuy');
+    anjay.appendChild(table);
+    // let div = document.createElement('div');
+    // div.setAttribute('class','diaz');
+    // div.appendChild(table);
+    // document.body.appendChild(div);
     return false;
 }
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Operations</title>
+    <link rel="stylesheet" href="alin.css">
+</head>
+<body>
+    <header>
+        <h1>Matrix Operations Calculator</h1>
+    </header>
+    <main>
+        <section class="operation-selection">
+            <h2>Select an Operation</h2>
+            <button onclick="loadOperation('add')">Add Matrices</button>
+            <button onclick="loadOperation('subtract')">Subtract Matrices</button>
+            <button onclick="loadOperation('scalar')">Scalar Multiplication</button>
+            <button onclick="loadOperation('transpose')">Transpose Matrix</button>
+            <button onclick="loadOperation('inverse')">Matrix Inverse</button>
+        </section>
+        <section id="operation-container" class="operation-container">
+            <!-- Dynamic content will be loaded here -->
+        </section>
+    </main>
+    <footer>
+        <p>Aljabar Linear & Matriks</p>
+    </footer>
+    <script src="alin.js"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ let hkolom2 = document.getElementById('hkolom2');
 
 tambahbaris1.addEventListener("click",function(e){
     e.preventDefault();
-    let table = tambahbaris1.previousElementSibling;
+    let table = tambahbaris1.parentElement.parentElement;
     let tr = table.querySelectorAll('tr');
     let td = tr[0].querySelectorAll('td');
     let panjangtr = td.length;
@@ -27,7 +27,7 @@ tambahbaris1.addEventListener("click",function(e){
 
 tambahbaris2.addEventListener("click",function(e){
     e.preventDefault();
-    let table = tambahbaris2.previousElementSibling;
+    let table = tambahbaris2.parentElement.parentElement;
     let tr = table.querySelectorAll('tr');
     let td = tr[0].querySelectorAll('td');
     let panjangtr = td.length;
@@ -45,7 +45,7 @@ tambahbaris2.addEventListener("click",function(e){
 
 tambahkolom1.addEventListener("click",function(e){
     e.preventDefault();
-    let parent = tambahkolom1.parentElement;
+    let parent = tambahkolom1.parentElement.parentElement;
     let table = parent.querySelector('table');
     let tr = table.querySelectorAll('tr');
     tr.forEach(e => {
@@ -59,7 +59,7 @@ tambahkolom1.addEventListener("click",function(e){
 
 tambahkolom2.addEventListener("click",function(e){
     e.preventDefault();
-    let parent = tambahkolom2.parentElement;
+    let parent = tambahkolom2.parentElement.parentElement;
     let table = parent.querySelector('table');
     let tr = table.querySelectorAll('tr');
     tr.forEach(e => {
@@ -73,8 +73,8 @@ tambahkolom2.addEventListener("click",function(e){
 
 hbaris1.addEventListener("click",function(e){
     e.preventDefault();
-    if (hbaris1.parentElement.querySelectorAll('tr').length>1) {
-        let parent = hbaris1.parentElement;
+    if (hbaris1.parentElement.previousElementSibling.querySelectorAll('tr').length>1) {
+        let parent = hbaris1.parentElement.parentElement;
         let table = parent.querySelector('table');
         let tr = table.querySelectorAll('tr');
         table.querySelector('tbody').lastElementChild.remove();
@@ -85,8 +85,8 @@ hbaris1.addEventListener("click",function(e){
 
 hbaris2.addEventListener("click",function(e){
     e.preventDefault();
-    if (hbaris2.parentElement.querySelectorAll('tr').length>1) {
-        let parent = hbaris2.parentElement;
+    if (hbaris2.parentElement.previousElementSibling.querySelectorAll('tr').length>1) {
+        let parent = hbaris2.parentElement.parentElement;
         let table = parent.querySelector('table');
         let tr = table.querySelectorAll('tr');
         table.querySelector('tbody').lastElementChild.remove();
@@ -97,8 +97,8 @@ hbaris2.addEventListener("click",function(e){
 
 hkolom1.addEventListener("click",function(e){
     e.preventDefault();
-    if (hkolom1.parentElement.querySelectorAll('tr:nth-child(1) td').length>1) {
-        let parent = hkolom1.parentElement;
+    if (hkolom1.parentElement.previousElementSibling.querySelectorAll('tr:nth-child(1) td').length>1) {
+        let parent = hkolom1.parentElement.parentElement;
         let table = parent.querySelector('table');
         let tr = table.querySelectorAll('tr');
         tr.forEach(td => {
@@ -111,8 +111,8 @@ hkolom1.addEventListener("click",function(e){
 
 hkolom2.addEventListener("click",function(e){
     e.preventDefault();
-    if (hkolom2.parentElement.querySelectorAll('tr:nth-child(1) td').length>1) {
-        let parent = hkolom2.parentElement;
+    if (hkolom2.parentElement.previousElementSibling.querySelectorAll('tr:nth-child(1) td').length>1) {
+        let parent = hkolom2.parentElement.parentElement;
         let table = parent.querySelector('table');
         let tr = table.querySelectorAll('tr');
         tr.forEach(td => {

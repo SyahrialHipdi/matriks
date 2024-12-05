@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.bagian{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.bagian table {
+    display: block;
+    margin-bottom: 15px;
+}
+
+input[type='number']{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.utama {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.kelasking {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type='submit']{
+    font-size: 16px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 2px solid #4caf50 ;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #4caf50;
+    color: white;
+    
+}
+
+.uhuy {
+    display: block;
+    margin: 10px 0;
+    margin-bottom: 5px;
+}
+
+.anjay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 20px;
+    align-items: center;
+    margin: 25px 0;
+}
+
+
+footer {
+    margin-top: 50px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
