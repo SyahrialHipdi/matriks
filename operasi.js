@@ -11,8 +11,10 @@ let matriks=[];
 let satu;
 let dua;
 let hasil;
+let tables=[];
+
 form.addEventListener("submit",function(e){
-    e.preventDefault();
+    matriks = [];
     tables = document.querySelectorAll("table");
     tables.forEach(e => {
         let table = e.querySelectorAll('tr');
@@ -45,11 +47,14 @@ form.addEventListener("submit",function(e){
         table.appendChild(tr);
     });
     document.body.appendChild(table);
+    
+    e.preventDefault();
     return false;
 });
 
 
 function kirim(e){
+    matriks = [];
     e.preventDefault();
     tables = document.querySelectorAll("table");
     tables.forEach(e => {
@@ -71,21 +76,36 @@ function kirim(e){
 }
 
 function tambahmatriks(elemen){
-    kirim(elemen);
-    hasil = math.add(satu,dua);
-    isi(hasil);
+    try {        
+        kirim(elemen);
+        hasil = math.add(satu,dua);
+        isi(hasil);
+    } catch (error) {
+        alert(error);
+        return false;
+    }
 }
 
-function kurangmatriks(elemen){
-    kirim(elemen);
-    hasil = math.subtract(satu,dua);
-    isi(hasil);
+function kurangmatriks(elemen){  
+    try {
+        kirim(elemen);
+        hasil = math.subtract(satu,dua);
+        isi(hasil);
+    } catch (error) {
+        alert(error)
+        return false;
+    }
 }
 
 function kalimatriks(elemen){
-    kirim(elemen);
-    hasil = math.multiply(satu,dua);
-    isi(hasil);
+    try {
+        kirim(elemen);
+        hasil = math.multiply(satu,dua);
+        isi(hasil);
+    } catch (error) {
+        alert(error);
+        return false;
+    }
 }
 
 function scalarmatriks(elemen){
@@ -96,14 +116,20 @@ function scalarmatriks(elemen){
 }
 
 function transposematriks(elemen){
+    let temp = prompt("pilih matriks 1/2: ");
+    if (temp != 1 && temp !=2) alert("input salah"); return false;
+
     kirim(elemen);
-    hasil = math.transpose(satu);
+    hasil = math.transpose(matriks[parseInt(temp)-1]);
     isi(hasil);
 }
 
 function inversionmatriks(elemen){
+    let temp = prompt("pilih matriks 1/2: ");
+    if (temp != 1 && temp !=2) alert("input salah"); return false;
+                        
     kirim(elemen);
-    hasil = math.inv(satu);
+    hasil = math.inv(matriks[parseInt(temp)-1]);
     isi(hasil);
 }
 
@@ -124,10 +150,6 @@ function isi(hasil){
     });
     table.setAttribute('class','uhuy');
     anjay.appendChild(table);
-    // let div = document.createElement('div');
-    // div.setAttribute('class','diaz');
-    // div.appendChild(table);
-    // document.body.appendChild(div);
     return false;
 }
 

@@ -85,11 +85,12 @@ input[type="submit"]:hover {
     gap: 20px 20px;
     align-items: center;
     margin: 25px 0;
+    margin-bottom: 100px;
 }
 
 
 footer {
-    margin-top: 50px;
+    margin-top: 500px;
     background-color: #f1f1f1;
     padding: 10px;
     position: fixed;
