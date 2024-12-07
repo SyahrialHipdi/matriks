@@ -117,7 +117,7 @@ function scalarmatriks(elemen){
 
 function transposematriks(elemen){
     let temp = prompt("pilih matriks 1/2: ");
-    if (temp != 1 && temp !=2) alert("input salah"); return false;
+    if (temp != 1 && temp !=2) return false;
 
     kirim(elemen);
     hasil = math.transpose(matriks[parseInt(temp)-1]);
@@ -126,7 +126,7 @@ function transposematriks(elemen){
 
 function inversionmatriks(elemen){
     let temp = prompt("pilih matriks 1/2: ");
-    if (temp != 1 && temp !=2) alert("input salah"); return false;
+    if (temp != 1 && temp !=2) return false;
                         
     kirim(elemen);
     hasil = math.inv(matriks[parseInt(temp)-1]);
